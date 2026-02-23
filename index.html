@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inscripción al evento de verano</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header class="cabecera">
+        <img src="ola.webp" alt="Logo evento" class="imagen-cabecera">
+        <h1>Inscripción al evento de verano</h1>
+    </header>
+
+    <div class="fondo"></div>
+
+    <main>
+        <form id="formRegistro" class="tarjeta" novalidate>
+
+            <label for="nombre">Nombre completo</label>
+            <input id="nombre" type="text" required>
+
+            <label for="email">Email</label>
+            <input id="email" type="email" required>
+
+            <label for="edad">Edad</label>
+            <input id="edad" type="number" min="14" max="99" required>
+
+            <label for="fecha">Fecha de asistencia</label>
+            <input id="fecha" type="date" required>
+
+            <label for="tipoEntrada">Tipo de entrada</label>
+            <select id="tipoEntrada" required>
+                <option value="">Selecciona</option>
+                <option value="GENERAL">General</option>
+                <option value="VIP">VIP</option>
+                <option value="ESTUDIANTE">Estudiante</option>
+            </select>
+
+            <label for="comentarios">Comentarios</label>
+            <textarea id="comentarios"></textarea>
+
+            <button type="submit">Enviar inscripción</button>
+
+            <!-- Esto es con IA -->
+            <div id="zonaMensaje" class="mensaje" aria-live="polite"></div>
+
+        </form>
+    </main>
+
+    <script src="validacion.js"></script>
+</body>
+</html>
