@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: transparent;
+    color: #333;
+    line-height: 1.4;
+}
+
+.fondo {
+    position: fixed;
+    inset: 0;         
+    width: 100vw;
+    height: 100vh;
+    background-image: url("surf.webp");
+    background-repeat: no-repeat;
+    background-size: cover;      
+    background-position: center;
+    opacity: 0.60;
+    z-index: -1;
+}
+
+.cabecera {
+    text-align: center;
+    background: white;
+    padding: 20px 0 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.imagen-cabecera {
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.cabecera h1 {
+    padding: 15px;
+    font-weight: 600;
+    color: #222;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.tarjeta {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 400px;
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: var(--transition);
+}
+
+.tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 30px 50px rgba(0,0,0,0.15);
+}
+
+label {
+    display: block;
+    margin-top: 14px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    margin-top: 6px;
+    padding: 9px;
+    border-radius: 6px;
+    border: 1px solid #d0d0d0;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #666;
+    box-shadow: 0 0 0 2px rgba(64, 54, 255, 0.25);
+}
+
+textarea::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+button {
+    margin-top: 22px;
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-radius: 6px;
+    background: #4036ff;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+button:hover {
+    background: #352cd3;
+    transform: translateY(-1px);
+}
+
+.mensaje {
+    margin-top: 16px;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.correcto {
+    background: #e7f6ea;
+    border-left: 4px solid #3a7d44;
+}
+
+.aviso {
+    background: #fff6e0;
+    border-left: 4px solid #c99700;
+}
+
+.error {
+    background: #fdeaea;
+    border-left: 4px solid #c0392b;
+}
